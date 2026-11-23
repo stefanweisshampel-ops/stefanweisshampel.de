@@ -65,14 +65,13 @@ figure{margin:0}
 
 /* Zeitleiste */
 .time{background:var(--paper)}
-.time ol{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;position:relative}
-.time ol::before{content:"";position:absolute;left:0;right:0;top:15px;height:3px;background:var(--line)}
-.time li{position:relative;padding:44px 18px 0 0}
-.time li::before{content:"";position:absolute;top:7px;left:0;width:19px;height:19px;border-radius:50%;background:var(--bg);border:4px solid var(--blue)}
-.time li.gl::before{border-color:var(--teal-ink)}
-.time .yr{font-family:var(--serif);font-weight:700;font-size:26px;display:block;line-height:1.1;margin-bottom:6px}
-.time .what{font-size:15px;line-height:1.45;color:var(--soft)}
-.time .what b{color:var(--ink);font-weight:600}
+.works{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.works li{border-top:2px solid var(--ink);padding-top:16px;display:flex;flex-direction:column;gap:6px}
+.works li.gl{border-top-color:var(--teal-ink)}
+.works b{font-family:var(--serif);font-size:20px;line-height:1.2}
+.works span{font-size:15px;line-height:1.5;color:var(--soft)}
+.works small{font-size:14px;color:var(--soft);margin-top:auto;padding-top:6px}
+.works a{color:inherit;text-decoration:none}.works a:hover b{text-decoration:underline;text-underline-offset:3px}
 
 /* Bücher */
 .feature{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:clamp(24px,4vw,56px);margin-top:36px;align-items:start}
@@ -163,12 +162,11 @@ footer a{color:var(--soft)}
 .hero .wrap,.feature,.gl-band .wrap,.contact .wrap,.legal .wrap,.series .intro{grid-template-columns:minmax(0,1fr)}
 
 .bk.main{max-width:220px}
-.time ol{grid-template-columns:minmax(0,1fr);gap:22px}
-.time ol::before{left:8px;right:auto;top:8px;bottom:8px;width:3px;height:auto}
-.time li{padding:0 0 0 40px}.time li::before{top:4px}
+.works{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:600px){
 body{font-size:16px}
+.works{grid-template-columns:minmax(0,1fr)}
 .hero h1{font-size:42px}
 .legend{grid-template-columns:minmax(0,1fr)}
 table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}
@@ -205,13 +203,12 @@ table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-bl
 <section class="band time" aria-labelledby="t-h">
   <div class="wrap">
     <h2 id="t-h">Veröffentlichungen und Projekte</h2>
-    <ol>
-      <li><span class="yr">2017</span><span class="what"><b>Forum Geschichte</b>, Ausgabe Gymnasium Sachsen-Anhalt ab 2017: Mitautor der Bände 5 bis 8 (Cornelsen)</span></li>
-      <li><span class="yr">2022</span><span class="what"><b>Fachlehrplan Geschichte</b>, Gymnasium Sachsen-Anhalt: Mitglied der Fachgruppe zur Anpassung 2022</span></li>
-      <li><span class="yr">2024</span><span class="what"><b>Bilingualer Geschichtsunterricht</b>. Methoden und Perspektiven (Wochenschau Verlag)</span></li>
-      <li><span class="yr">2025</span><span class="what"><b>Forum Geschichte</b>, Neue Ausgabe ab 2025: Bände 5 bis 8, erschienen 2025 und 2026 (Cornelsen)</span></li>
-      <li class="gl"><span class="yr">Heute</span><span class="what"><b>Gespann-Lader</b>: Schnelllader-Karte für E-Autos mit Anhänger</span></li>
-    </ol>
+    <ul class="works">
+      <li><a href="#buecher"><b>Bilingualer Geschichtsunterricht</b></a><span>Methoden und Perspektiven. Monografie in der Reihe Methoden historischen Lernens</span><small>Wochenschau Verlag, 2024</small></li>
+      <li><a href="#buecher"><b>Forum Geschichte Sachsen-Anhalt</b></a><span>Mitautor der Schulbuchreihe für das Gymnasium, Bände 5 bis 8 der Ausgaben ab 2017 und ab 2025</span><small>Cornelsen, 2017 bis 2026</small></li>
+      <li><b>Fachlehrplan Geschichte</b><span>Mitglied der Fachgruppe für den Fachlehrplan Gymnasium Sachsen-Anhalt</span><small>Ministerium für Bildung, Anpassung 2022</small></li>
+      <li class="gl"><a href="#gespann-lader"><b>Gespann-Lader</b></a><span>Schnelllader-Karte für E-Autos mit Anhänger, kostenlos und ohne App</span><small>Eigenes Projekt, gespann-lader.de</small></li>
+    </ul>
   </div>
 </section>
 
